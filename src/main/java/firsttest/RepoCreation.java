@@ -15,8 +15,9 @@ import org.eclipse.rdf4j.sail.spin.config.SpinSailConfig;
 public class RepoCreation {
 
 	public static void main(String[] args) {
-		File baseDir = new File("/home/piero/Development/rdf4j/repotest1");
+		File baseDir = new File("/home/piero/.RDF4J/server");
 		LocalRepositoryManager manager = new LocalRepositoryManager(baseDir);
+		File file = new File("/home/piero/Development/sparql/test-ais/aisbigtest2.ttl");
 		SailImplConfig spinSailConfig = new SpinSailConfig(
 		           new SchemaCachingRDFSInferencerConfig(
 		                 new DedupingInferencerConfig(new MemoryStoreConfig())

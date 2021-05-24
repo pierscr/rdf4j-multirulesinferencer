@@ -13,6 +13,7 @@ import static eng.rs.rdf4j.inference.MultipleRulesInferenceSchema.QUERY_LANGUAGE
 import static  eng.rs.rdf4j.inference.MultipleRulesInferenceSchema.RULE_QUERY;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Iterator;
 import java.util.ListIterator;
 import java.util.Optional;
@@ -145,6 +146,9 @@ public final class MultipleRulesInferenceConfig extends AbstractDelegatingSailIm
 				Models.objectLiteral(m.getStatements((Resource)  test.getObject(), SP.TEXT_PROPERTY, null))
 				.ifPresent(lit -> addMatchQuery(lit.stringValue()));
 			}
+			
+			 Collections.sort(ruleQuery);
+			 Collections.sort(matcherQuery);
 
 		} catch (ModelException e) {
 			throw new SailConfigException(e.getMessage(), e);
