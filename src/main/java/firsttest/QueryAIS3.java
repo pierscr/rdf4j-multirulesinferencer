@@ -6,13 +6,12 @@ import org.eclipse.rdf4j.model.Value;
 import org.eclipse.rdf4j.query.BindingSet;
 import org.eclipse.rdf4j.query.TupleQuery;
 import org.eclipse.rdf4j.query.TupleQueryResult;
-import org.eclipse.rdf4j.query.explanation.Explanation.Level;
 import org.eclipse.rdf4j.repository.Repository;
 import org.eclipse.rdf4j.repository.RepositoryConnection;
 import org.eclipse.rdf4j.repository.manager.LocalRepositoryManager;
 import org.eclipse.rdf4j.sail.config.SailRegistry;
 
-import eng.rs.rdf4j.inference.MultipleRulesInferenceFactory;
+import it.eng.rslab.rdf4j.inference.MultipleRulesInferenceFactory;
 
 public class QueryAIS3 {
 	public static void main(String[] args) {

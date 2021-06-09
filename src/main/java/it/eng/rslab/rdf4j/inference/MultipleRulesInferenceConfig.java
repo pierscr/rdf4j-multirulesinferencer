@@ -1,4 +1,4 @@
-package eng.rs.rdf4j.inference;
+package it.eng.rslab.rdf4j.inference;
 
 /*******************************************************************************
  * Copyright (c) 2015 Eclipse RDF4J contributors, Aduna, and others.
@@ -8,9 +8,9 @@ package eng.rs.rdf4j.inference;
  * http://www.eclipse.org/org/documents/edl-v10.php.
  *******************************************************************************/
 
-import static eng.rs.rdf4j.inference.MultipleRulesInferenceSchema.MATCHER_QUERY;
-import static eng.rs.rdf4j.inference.MultipleRulesInferenceSchema.QUERY_LANGUAGE;
-import static  eng.rs.rdf4j.inference.MultipleRulesInferenceSchema.RULE_QUERY;
+import static it.eng.rslab.rdf4j.inference.MultipleRulesInferenceSchema.MATCHER_QUERY;
+import static it.eng.rslab.rdf4j.inference.MultipleRulesInferenceSchema.QUERY_LANGUAGE;
+import static  it.eng.rslab.rdf4j.inference.MultipleRulesInferenceSchema.RULE_QUERY;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -20,7 +20,6 @@ import java.util.Optional;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-import org.eclipse.rdf4j.RDF4JException;
 import org.eclipse.rdf4j.model.BNode;
 import org.eclipse.rdf4j.model.IRI;
 import org.eclipse.rdf4j.model.Literal;
@@ -35,8 +34,6 @@ import org.eclipse.rdf4j.model.vocabulary.RDF;
 import org.eclipse.rdf4j.model.vocabulary.SP;
 import org.eclipse.rdf4j.query.MalformedQueryException;
 import org.eclipse.rdf4j.query.QueryLanguage;
-import org.eclipse.rdf4j.query.parser.ParsedGraphQuery;
-import org.eclipse.rdf4j.query.parser.QueryParserUtil;
 import org.eclipse.rdf4j.sail.config.AbstractDelegatingSailImplConfig;
 import org.eclipse.rdf4j.sail.config.SailConfigException;
 import org.eclipse.rdf4j.sail.config.SailImplConfig;

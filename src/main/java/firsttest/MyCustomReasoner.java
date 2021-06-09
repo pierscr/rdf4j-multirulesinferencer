@@ -4,7 +4,6 @@ import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
 
-import org.eclipse.rdf4j.common.lang.service.ServiceRegistry;
 import org.eclipse.rdf4j.model.Value;
 import org.eclipse.rdf4j.query.BindingSet;
 import org.eclipse.rdf4j.query.QueryLanguage;
@@ -16,23 +15,13 @@ import org.eclipse.rdf4j.repository.RepositoryConnection;
 import org.eclipse.rdf4j.repository.RepositoryException;
 import org.eclipse.rdf4j.repository.config.RepositoryConfig;
 import org.eclipse.rdf4j.repository.manager.LocalRepositoryManager;
-import org.eclipse.rdf4j.repository.sail.SailRepository;
 import org.eclipse.rdf4j.repository.sail.config.SailRepositoryConfig;
 import org.eclipse.rdf4j.rio.RDFParseException;
-import org.eclipse.rdf4j.sail.config.SailFactory;
 import org.eclipse.rdf4j.sail.config.SailImplConfig;
-import org.eclipse.rdf4j.sail.config.SailRegistry;
-import org.eclipse.rdf4j.sail.inferencer.fc.CustomGraphQueryInferencer;
-import org.eclipse.rdf4j.sail.inferencer.fc.config.CustomGraphQueryInferencerConfig;
 import org.eclipse.rdf4j.sail.inferencer.fc.config.DedupingInferencerConfig;
-import org.eclipse.rdf4j.sail.inferencer.fc.config.SchemaCachingRDFSInferencerConfig;
-import org.eclipse.rdf4j.sail.memory.MemoryStore;
 import org.eclipse.rdf4j.sail.memory.config.MemoryStoreConfig;
-import org.eclipse.rdf4j.sail.spin.config.SpinSailConfig;
 
-import eng.rs.rdf4j.inference.MultipleRulesInference;
-import eng.rs.rdf4j.inference.MultipleRulesInferenceConfig;
-import eng.rs.rdf4j.inference.MultipleRulesInferenceFactory;
+import it.eng.rslab.rdf4j.inference.MultipleRulesInferenceConfig;
 import eng.rslab.rdf4j.functions.PalindromeFunction;
 
 public class MyCustomReasoner {

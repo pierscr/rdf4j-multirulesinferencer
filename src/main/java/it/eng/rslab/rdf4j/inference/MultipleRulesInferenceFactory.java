@@ -1,4 +1,4 @@
-package eng.rs.rdf4j.inference;
+package it.eng.rslab.rdf4j.inference;
 
 /*******************************************************************************
  * Copyright (c) 2015 Eclipse RDF4J contributors, Aduna, and others.
@@ -8,6 +8,7 @@ package eng.rs.rdf4j.inference;
  * http://www.eclipse.org/org/documents/edl-v10.php.
  *******************************************************************************/
 
+import it.eng.rslab.rdf4j.inference.MultipleRulesInferenceConfig;
 import org.eclipse.rdf4j.RDF4JException;
 import org.eclipse.rdf4j.sail.Sail;
 import org.eclipse.rdf4j.sail.config.SailConfigException;
@@ -15,7 +16,6 @@ import org.eclipse.rdf4j.sail.config.SailFactory;
 import org.eclipse.rdf4j.sail.config.SailImplConfig;
 
 /**
- * A {@link SailFactory} that creates a {@link CustomGraphQueryInferencer} based on RDF configuration data.
  *
  * @author Dale Visser
  */
@@ -50,8 +50,7 @@ public class MultipleRulesInferenceFactory implements SailFactory {
 		if (config instanceof MultipleRulesInferenceConfig) {
 			MultipleRulesInferenceConfig customConfig = (MultipleRulesInferenceConfig) config;
 			try {
-				sail.setFields(customConfig.getQueryLanguage(), customConfig.getRuleQuery(),
-						customConfig.getMatcherQuery());
+				sail.setFields(customConfig.getQueryLanguage(), customConfig.getRuleQuery());
 			} catch (RDF4JException e) {
 				throw new SailConfigException("Problem occured parsing rule or matcher query text.", e);
 			}

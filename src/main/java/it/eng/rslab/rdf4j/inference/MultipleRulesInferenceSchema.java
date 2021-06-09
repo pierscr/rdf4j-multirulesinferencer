@@ -1,4 +1,4 @@
-package eng.rs.rdf4j.inference;
+package it.eng.rslab.rdf4j.inference;
 
 /*******************************************************************************
  * Copyright (c) 2015 Eclipse RDF4J contributors, Aduna, and others.
